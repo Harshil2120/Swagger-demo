@@ -14,7 +14,7 @@
 	<name>swagger-demo</name>
 	<description>learning swagger</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>12</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -47,6 +47,22 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <appName>corona-tracker-application-1</appName>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <release>12</release>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
